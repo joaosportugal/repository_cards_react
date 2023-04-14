@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+:root {
+    --bg-color: #fff;
+    --cor-primaria: #8c7ae6;
+    --cor-primaria-clara: #9c88ff;
+    --texto: #2f3640;
+}
+
+button {
+    background-color: var(--cor-primaria);
+    color: var(--bg-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: var(--cor-primaria-clara);
+}
+
+.github_link:hover {
+    color: var(--cor-primaria-clara);
+}
+
+input,
+button {
+    width: 200px;
+    max-width: 100%;
+    padding: 1em;
+    border-radius: 1em;
+    border: 1px solid var(--cor-primaria);
+    outline: 1px solid var(--cor-primaria);
+}
+
+.github_link {
+    color: var(--cor-primaria);
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+input:first-child {
+    margin-top: 1em;
+}
+
+h1 {
+    margin-top: 32px;
+    font-size: 44px;
+    color: var(--cor-primaria);
+    text-align: center;
+}
+
+.cards_display {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.form_container {
+    display: block;
+    text-align: center;
+    margin: 16px 0;
+}
+
+.form_btn {
+    margin-left: 8px;
+}

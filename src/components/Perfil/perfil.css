@@ -1,0 +1,47 @@
+.perfil_card {
+    max-width: 260px;
+    width: 100%;
+    height: 360px;
+    display: block;
+    background-color: var(--cor-primaria);
+    padding: 2em;
+    border-radius: 1em;
+    border: 2px solid var(--cor-primaria);
+    color: var(--bg-color);
+}
+
+.perfil_avatar {
+    width: 150px;
+    height: 150px;
+    border: 3px solid var(--bg-color);
+    border-radius: 50%;
+}
+
+.perfil_card_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .8em;
+}
+
+.perfil_card button {
+    background-color: var(--bg-color);
+    color: var(--cor-primaria);
+    transition: ease .3s;
+}
+
+.perfil_card a {
+    color: var(--bg-color);
+    transition: ease .3s;
+}
+
+.perfil_card a:hover {
+    color: var(--bg-color);
+    transform: scale(1.1);
+}
+
+.perfil_card button:hover {
+    background-color: var(--bg-color);
+    transform: scale(1.1);
+}
