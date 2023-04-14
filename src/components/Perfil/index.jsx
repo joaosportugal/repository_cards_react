@@ -1,15 +1,7 @@
 import { useEffect } from 'react';
 import './perfil.css';
 
-const Perfil = ({avatar, nome, githubLink, alterarReposSendoExibido, toggleReposState}) => {
-
-    function changeRepos() {
-        alterarReposSendoExibido(nome);
-    }
-
-    function toggleRepos() {
-        toggleReposState();
-    }
+const Perfil = ({avatar, nome, githubLink, alterarReposSendoExibido, exibirRepos}) => {
 
     return (
         <div className='perfil_card'>
@@ -19,8 +11,8 @@ const Perfil = ({avatar, nome, githubLink, alterarReposSendoExibido, toggleRepos
                 <a className="github_link" target="_blank" href={githubLink}>Abrir Github</a>
                 <button type="button" onClick=
                     {() => {
-                        changeRepos();
-                        toggleRepos();
+                        alterarReposSendoExibido(nome);
+                        exibirRepos();
                     }}>
                     Ver Repositórios
                 </button>

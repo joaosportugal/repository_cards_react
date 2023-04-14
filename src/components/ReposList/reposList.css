@@ -6,6 +6,18 @@
     margin: 32px 0;
 }
 
+.list_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.list_header span {
+    padding-left: 16px;
+    cursor: pointer;
+}
+
 .list_item {
     display: block;
     padding: 16px;
@@ -32,6 +44,5 @@
 } 
 
 .list_title {
-    margin-top: 32px;
     color: var(--cor-primaria);
 }

@@ -11,11 +11,15 @@ function App() {
     setReposSendoExibido(nomeRepos)
   }
 
-  function toggleReposState() {
-    setReposState(reposState => !reposState)
+  function exibirRepos() {
+    setReposVisible(true)
   }
 
-  const [reposState, setReposState] = useState(false);
+  function closeRepos() {
+    setReposVisible(false);
+  }
+
+  const [reposVisible, setReposVisible] = useState(false);
   const [reposSendoExibido, setReposSendoExibido] = useState('');
   const [nomeNoInput, setNomeNoInput] = useState('');
   const [componentes, setComponentes] = useState([
@@ -25,8 +29,8 @@ function App() {
       githubLink='https://github.com/joaosportugal'
       reposSendoExibido={reposSendoExibido}
       alterarReposSendoExibido={alterarReposSendoExibido}
-      toggleReposState={toggleReposState}
-      reposState={reposState}
+      exibirRepos={exibirRepos}
+      reposVisible={reposVisible}
       />
   ]);
 
@@ -38,8 +42,8 @@ function App() {
       githubLink={`https://github.com/${nomeNoInput}`}
       reposSendoExibido={reposSendoExibido}
       alterarReposSendoExibido={alterarReposSendoExibido}
-      toggleReposState={toggleReposState}
-      reposState={reposState}
+      exibirRepos={exibirRepos}
+      reposVisible={reposVisible}
     />])
   }
 
@@ -57,7 +61,8 @@ function App() {
           {componentes} 
         </section>
 
-        {reposState && <ReposList reposSendoExibido={reposSendoExibido} reposState={reposState}/>}
+        {reposVisible && <ReposList reposSendoExibido={reposSendoExibido} reposVisible={reposVisible}
+        closeRepos={closeRepos}/>}
         
       </div>
     </>
